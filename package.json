@@ -10,7 +10,9 @@
   ],
   "scripts": {
     "watch": "tsc -w",
-    "start": "ts-node src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "postinstall": "yarn run build",
     "dev": "nodemon src/server.ts"
   },
   "dependencies": {
