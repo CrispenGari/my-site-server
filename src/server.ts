@@ -5,8 +5,8 @@ import router from "./routes";
 
 // ----
 const app: express.Application = express();
-const PORT: any = 3001 || process.env.PORT;
-
+const PORT: any = process.env.PORT || 3001;
+const HOST: string = "0.0.0.0";
 //
 app.use(
   cors({
@@ -15,6 +15,6 @@ app.use(
 );
 app.use(express.json());
 app.use(router);
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log(`The server is running on port: ${PORT}`);
 });
