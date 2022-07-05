@@ -10,7 +10,7 @@ const HOST: string = "0.0.0.0";
 //
 app.use(
   cors({
-    origin: "https://crispengari-ac2c8.web.app/",
+    origin: "https://crispengari-ac2c8.web.app",
   })
 );
 app.use(express.json());
