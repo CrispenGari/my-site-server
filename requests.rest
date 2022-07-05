@@ -1,11 +1,13 @@
 ###
 
-
 POST http://localhost:3001/api/v1/send-email
 Content-Type: application/json
 
 {
     "body":"I want to join the AI Class.",
     "subject": "AI Tutour",
-    "from": "garidzirac@gmail.com"
+    "from": "crispengari@gmail.com",
+    "firstName": "Tinashe Crispen",
+    "lastName": "Garidzira",
+    "phoneNumber": "+27652305879"
 }

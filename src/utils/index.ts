@@ -30,3 +30,32 @@ export const sendEmail = async (
     replyTo: from,
   });
 };
+
+export const sendAutoReply = async (
+  html: string,
+  subject: string,
+  to: string
+) => {
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: "crispendev@gmail.com",
+      pass: process.env.SENDER_PASSWORD as string,
+      credentials: {
+        user: "crispendev@gmail.com",
+        pass: process.env.SENDER_PASSWORD as string,
+      },
+    },
+    requireTLS: true,
+  });
+  transporter.use("compile", inLineCss());
+  await transporter.sendMail({
+    from: `"Automatic Reply: Crispen Bot." <crispengari@gmail.com>`,
+    to: to,
+    subject,
+    html: html,
+    replyTo: "crispen-no-reply@gmail.com",
+  });
+};
