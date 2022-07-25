@@ -28,7 +28,7 @@ const HOST: string = "0.0.0.0";
       cookie: {
         maxAge: __maxAge__,
         httpOnly: true,
-        secure: false, // https when true
+        secure: false, // https when t
         sameSite: "lax",
       },
     })
