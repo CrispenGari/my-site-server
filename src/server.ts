@@ -1,12 +1,9 @@
 import "dotenv/config";
-import loadEvTypes from "node-env-types";
 import express from "express";
 import cors from "cors";
 import router from "./routes";
 import session from "express-session";
 import { __cookieName__, __maxAge__ } from "./constants";
-
-loadEvTypes();
 
 // ----
 
