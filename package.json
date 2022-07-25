@@ -24,6 +24,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.3",
     "mongoose": "^6.4.6",
+    "node-env-types": "^1.0.6",
     "nodemailer": "^6.7.6",
     "nodemailer-juice": "^1.0.1",
     "ts-node": "^10.2.0",
@@ -39,7 +40,6 @@
     "@types/express-session": "^1.17.5",
     "@types/node": "^16.6.1",
     "@types/nodemailer": "^6.4.4",
-    "node-env-types": "^1.0.6",
     "nodemon": "^2.0.12"
   }
 }
